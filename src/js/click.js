@@ -22,6 +22,18 @@
             })
         })
     }
+
+    // 教师提交表单 防重复
+    let onceSubmit = (btn, form) => {
+        console.log("教师提交提交")
+        let subBtn = btn
+        $(form).submit(function () {
+            $(subBtn).attr("disabled", "disabled");
+            console.log("教师提交提交")
+        })
+    }
+
+    root.onceSubmit = onceSubmit
     root.lsSubmit = lsSubmit
 
 

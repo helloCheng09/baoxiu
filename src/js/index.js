@@ -18,13 +18,15 @@ if ($("#lsBxWrap").length) {
     //     root.autoTextarea(item[index])
     // })
 
-
     // 调取教师提交标签切换
     root.lsSubmit()
 
     // 调取教师保修状态 初始化
     // root.ifCheck()
     // root.ifDone()
+
+    // 防重复提交
+    root.onceSubmit(".submit_input", "form")
 } else if ($("#xzBxList").length) {
 
     // 校长 保修列表
